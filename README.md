@@ -30,7 +30,7 @@ renderTemplate('Hello, ${name}!', { name: 'World' });
 ```html
 <script src="https://unpkg.com/real-simple-template"></script>
 <script>
-  SimpleTemplate.renderTemplate('Hello, ${name}!', { name: 'World' });
+  RealSimpleTemplate.renderTemplate('Hello, ${name}!', { name: 'World' });
   // Hello, World!
   </script>
 ```

@@ -14,7 +14,7 @@ export default defineConfig({
     outDir: 'dist',
     lib: {
       entry: 'src/engine.ts',
-      name: 'SimpleTemplate',
+      name: 'RealSimpleTemplate',
       formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },

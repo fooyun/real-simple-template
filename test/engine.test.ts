@@ -72,7 +72,7 @@ describe('renderTemplate', () => {
     expect(result).toBe('Hello, ${name!');
   });
 
-  it('shuld handle not opening placeholders', () => {
+  it('should handle not opening placeholders', () => {
     const template = 'Hello, name}!';
     const data = { name: 'John' };
     const result = renderTemplate(template, data);
