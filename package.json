@@ -14,7 +14,7 @@
     "build": "tsc && vite build",
     "test": "vitest run",
     "format": "prettier --write '{src,test}/**/*.{ts,js}'",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
