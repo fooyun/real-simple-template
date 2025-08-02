@@ -15,7 +15,7 @@ export default defineConfig({
     lib: {
       entry: 'src/engine.ts',
       name: 'SimpleTemplate',
-      formats: ['es', 'umd'],
+      formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },
   },

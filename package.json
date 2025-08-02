@@ -1,9 +1,11 @@
 {
-  "name": "simple-template",
+  "name": "@fooyun/simple-template",
   "version": "1.0.0",
   "description": "A simple template engine",
-  "main": "dist/index.umd.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.es.d.ts",
   "files": [
     "dist"
   ],
