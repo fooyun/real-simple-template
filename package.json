@@ -1,5 +1,5 @@
 {
-  "name": "@fooyun/simple-template",
+  "name": "real-simple-template",
   "version": "1.0.0",
   "description": "A simple template engine",
   "main": "dist/index.cjs.js",
@@ -25,6 +25,9 @@
     "vitest": "^3.2.4"
   },
   "author": "fooyun <fooyun.code@outlook.com>",
-  "repository": "git@github.com:fooyun/simple-template.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fooyun/simple-template.git"
+  },
   "license": "Apache-2.0"
 }
