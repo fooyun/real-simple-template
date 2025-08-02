@@ -13,7 +13,8 @@
     "dev": "vitest --watch",
     "build": "tsc && vite build",
     "test": "vitest run",
-    "format": "prettier --write '{src,test}/**/*.{ts,js}'"
+    "format": "prettier --write '{src,test}/**/*.{ts,js}'",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
