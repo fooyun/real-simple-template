@@ -2,21 +2,35 @@
   "name": "real-simple-template",
   "version": "1.0.2",
   "description": "A simple template engine",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.es.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.es.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "dev": "vitest --watch",
     "build": "tsc && vite build",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "format": "prettier --write '{src,test}/**/*.{ts,js}'",
-    "prepare": "npm run build"
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
@@ -29,5 +43,17 @@
     "type": "git",
     "url": "git+ssh://git@github.com/fooyun/simple-template.git"
   },
-  "license": "Apache-2.0"
+  "homepage": "https://github.com/fooyun/simple-template",
+  "bugs": {
+    "url": "https://github.com/fooyun/simple-template/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "template",
+    "template-engine",
+    "simple-template"
+  ],
+  "lint-staged": {
+    "*.{ts,js}": "prettier --write"
+  }
 }

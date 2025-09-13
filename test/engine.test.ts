@@ -101,7 +101,8 @@ describe('renderTemplate', () => {
   });
 
   it('should perform well with a complex template', () => {
-    const template = '<h1>${title}</h1><p>${content}</p><ul><li>${user.name}</li><li>${user.email}</li></ul>';
+    const template =
+      '<h1>${title}</h1><p>${content}</p><ul><li>${user.name}</li><li>${user.email}</li></ul>';
     const data = {
       title: 'Performance Test',
       content: 'This is a performance test for the template engine.',
