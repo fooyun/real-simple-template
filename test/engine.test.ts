@@ -99,4 +99,23 @@ describe('renderTemplate', () => {
     const result = renderTemplate(template, data);
     expect(result).toBe('Hello, !');
   });
+
+  it('should perform well with a complex template', () => {
+    const template = '<h1>${title}</h1><p>${content}</p><ul><li>${user.name}</li><li>${user.email}</li></ul>';
+    const data = {
+      title: 'Performance Test',
+      content: 'This is a performance test for the template engine.',
+      user: {
+        name: 'John Doe',
+        email: 'john.doe@example.com',
+      },
+    };
+    const iterations = 100000;
+
+    console.time('renderTemplate performance');
+    for (let i = 0; i < iterations; i++) {
+      renderTemplate(template, data);
+    }
+    console.timeEnd('renderTemplate performance');
+  });
 });
